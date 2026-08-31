@@ -1,0 +1,701 @@
+/* ========================================
+   RESET
+======================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #050505;
+    color: #ffffff;
+    overflow-x: hidden;
+}
+
+
+/* ========================================
+   NAVBAR
+======================================== */
+
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 80px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 7%;
+
+    background: rgba(0, 0, 0, 0.88);
+    backdrop-filter: blur(12px);
+
+    border-bottom: 1px solid #222;
+
+    z-index: 1000;
+}
+
+
+/* LOGO */
+
+.logo {
+    width: 52px;
+    height: 52px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: 2px solid #ffffff;
+    border-radius: 50%;
+
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+
+/* NAVIGATION */
+
+.navbar nav {
+    display: flex;
+    gap: 40px;
+}
+
+.navbar nav a {
+    color: #ffffff;
+    text-decoration: none;
+
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+
+    transition: 0.3s ease;
+}
+
+.navbar nav a:hover {
+    color: #1684ff;
+}
+
+
+/* NAV BUTTON */
+
+.menu-btn {
+    padding: 12px 25px;
+
+    border: none;
+    background: #ffffff;
+    color: #000000;
+
+    font-weight: bold;
+    cursor: pointer;
+
+    transition: 0.3s ease;
+}
+
+.menu-btn:hover {
+    background: #1684ff;
+    color: #ffffff;
+}
+
+
+/* ========================================
+   HERO
+======================================== */
+
+.hero {
+    min-height: 100vh;
+
+    display: flex;
+    align-items: center;
+
+    padding: 120px 8% 80px;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(0, 0, 0, 0.95),
+            rgba(0, 0, 0, 0.60),
+            rgba(0, 0, 0, 0.15)
+        ),
+        url("https://images.unsplash.com/photo-1555215695-3004980ad54e?auto=format&fit=crop&w=2000&q=90");
+
+    background-size: cover;
+    background-position: center;
+}
+
+
+/* HERO CONTENT */
+
+.hero-content {
+    max-width: 750px;
+}
+
+.subtitle {
+    margin-bottom: 20px;
+
+    color: #1684ff;
+
+    font-size: 13px;
+    font-weight: bold;
+
+    letter-spacing: 4px;
+}
+
+.hero h1 {
+    font-size: clamp(55px, 8vw, 110px);
+
+    line-height: 0.92;
+    letter-spacing: -4px;
+
+    font-weight: 800;
+}
+
+.hero h1 span {
+    display: block;
+
+    color: transparent;
+
+    -webkit-text-stroke: 1px #ffffff;
+}
+
+.hero-text {
+    max-width: 520px;
+
+    margin-top: 30px;
+
+    color: #cccccc;
+
+    font-size: 17px;
+    line-height: 1.7;
+}
+
+
+/* HERO BUTTONS */
+
+.hero-buttons {
+    display: flex;
+    gap: 15px;
+
+    margin-top: 35px;
+}
+
+.btn {
+    display: inline-block;
+
+    padding: 16px 30px;
+
+    font-size: 14px;
+    font-weight: bold;
+
+    text-decoration: none;
+
+    transition: 0.3s ease;
+}
+
+.primary {
+    background: #087cff;
+    color: #ffffff;
+}
+
+.primary:hover {
+    background: #ffffff;
+    color: #000000;
+}
+
+.secondary {
+    border: 1px solid #ffffff;
+    color: #ffffff;
+}
+
+.secondary:hover {
+    background: #ffffff;
+    color: #000000;
+}
+
+
+/* ========================================
+   MODELS
+======================================== */
+
+.models {
+    padding: 110px 7%;
+    background: #090909;
+}
+
+.section-title {
+    margin-bottom: 60px;
+    text-align: center;
+}
+
+.section-title p {
+    margin-bottom: 15px;
+
+    color: #1684ff;
+
+    font-size: 12px;
+    letter-spacing: 4px;
+}
+
+.section-title h2 {
+    font-size: 48px;
+    letter-spacing: 2px;
+}
+
+
+/* CARS GRID */
+
+.cars-container {
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 30px;
+}
+
+
+/* CAR CARD */
+
+.car-card {
+    overflow: hidden;
+
+    background: #111111;
+
+    border: 1px solid #252525;
+
+    transition: 0.4s ease;
+}
+
+.car-card:hover {
+    transform: translateY(-8px);
+    border-color: #1677ff;
+}
+
+
+/* ========================================
+   CAR IMAGE
+======================================== */
+
+.car-image {
+    position: relative;
+
+    height: 320px;
+
+    display: flex;
+    align-items: flex-end;
+
+    background-size: cover;
+    background-position: center;
+}
+
+
+/* BMW M4 */
+
+.m4 {
+    background-image:
+        linear-gradient(
+            transparent,
+            rgba(0, 0, 0, 0.85)
+        ),
+        url("https://images.unsplash.com/photo-1555215695-3004980ad54e?auto=format&fit=crop&w=1200&q=90");
+}
+
+
+/* BMW i7 */
+
+.i7 {
+    background-image:
+        linear-gradient(
+            transparent,
+            rgba(0, 0, 0, 0.85)
+        ),
+        url("https://images.unsplash.com/photo-1556189250-72ba954cfc2b?auto=format&fit=crop&w=1200&q=90");
+}
+
+
+/* BMW XM */
+
+.xm {
+    background-image:
+        linear-gradient(
+            transparent,
+            rgba(0, 0, 0, 0.85)
+        ),
+        url("https://images.unsplash.com/photo-1520031441872-265e4ff70366?auto=format&fit=crop&w=1200&q=90");
+}
+
+
+/* BMW X5 */
+
+.x5 {
+    background-image:
+        linear-gradient(
+            transparent,
+            rgba(0, 0, 0, 0.85)
+        ),
+        url("https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?auto=format&fit=crop&w=1200&q=90");
+}
+
+
+/* CAR NAME */
+
+.car-image span {
+    padding: 25px;
+
+    font-size: 35px;
+    font-weight: bold;
+
+    letter-spacing: 2px;
+}
+
+
+/* ========================================
+   CAR CONTENT
+======================================== */
+
+.car-content {
+    padding: 30px;
+}
+
+.car-content h3 {
+    margin-bottom: 12px;
+
+    font-size: 24px;
+}
+
+.car-content p {
+    color: #999999;
+
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+
+/* SPECIFICATIONS */
+
+.specifications {
+    display: flex;
+    gap: 10px;
+
+    margin: 25px 0;
+}
+
+.specifications div {
+    flex: 1;
+
+    padding: 12px;
+
+    text-align: center;
+
+    border: 1px solid #292929;
+}
+
+.specifications strong {
+    display: block;
+    font-size: 17px;
+}
+
+.specifications small {
+    display: block;
+
+    margin-top: 5px;
+
+    color: #777777;
+
+    font-size: 9px;
+}
+
+
+/* CARD BUTTON */
+
+.car-content button {
+    width: 100%;
+
+    padding: 15px;
+
+    background: transparent;
+    color: #ffffff;
+
+    border: 1px solid #555555;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.3s ease;
+}
+
+.car-content button:hover {
+    background: #ffffff;
+    color: #000000;
+}
+
+
+/* ========================================
+   ABOUT
+======================================== */
+
+.about {
+    min-height: 650px;
+
+    display: flex;
+    align-items: center;
+
+    padding: 100px 8%;
+
+    background:
+        linear-gradient(
+            90deg,
+            #000000 10%,
+            rgba(0, 0, 0, 0.75),
+            rgba(0, 0, 0, 0.15)
+        ),
+        url("https://images.unsplash.com/photo-1553440569-bcc63803a83d?auto=format&fit=crop&w=2000&q=90");
+
+    background-size: cover;
+    background-position: center;
+}
+
+.about-text {
+    max-width: 600px;
+}
+
+.about h2 {
+    margin-bottom: 25px;
+
+    font-size: 60px;
+    line-height: 1.05;
+}
+
+.about h2 span {
+    color: #1684ff;
+}
+
+.about-text > p:not(.subtitle) {
+    color: #bbbbbb;
+
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+.about button {
+    margin-top: 30px;
+
+    padding: 15px 35px;
+
+    background: #ffffff;
+    color: #000000;
+
+    border: none;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.3s ease;
+}
+
+.about button:hover {
+    background: #1677ff;
+    color: #ffffff;
+}
+
+
+/* ========================================
+   CONTACT
+======================================== */
+
+.contact {
+    padding: 100px 7%;
+    background: #080808;
+}
+
+#contactForm {
+    max-width: 650px;
+
+    margin: auto;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 18px;
+}
+
+#contactForm input,
+#contactForm textarea {
+    width: 100%;
+
+    padding: 17px;
+
+    background: #111111;
+    color: #ffffff;
+
+    border: 1px solid #333333;
+
+    outline: none;
+
+    font-size: 15px;
+
+    transition: 0.3s ease;
+}
+
+#contactForm input:focus,
+#contactForm textarea:focus {
+    border-color: #1684ff;
+}
+
+#contactForm textarea {
+    height: 150px;
+    resize: none;
+}
+
+#contactForm button {
+    padding: 16px;
+
+    background: #087cff;
+    color: #ffffff;
+
+    border: none;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.3s ease;
+}
+
+#contactForm button:hover {
+    background: #ffffff;
+    color: #000000;
+}
+
+
+/* ========================================
+   FOOTER
+======================================== */
+
+footer {
+    padding: 50px 7%;
+
+    text-align: center;
+
+    background: #030303;
+
+    border-top: 1px solid #222222;
+}
+
+.footer-logo {
+    margin-bottom: 20px;
+
+    font-size: 30px;
+    font-weight: bold;
+}
+
+footer p {
+    color: #777777;
+    font-size: 13px;
+}
+
+
+/* ========================================
+   RESPONSIVE - TABLET
+======================================== */
+
+@media (max-width: 800px) {
+
+    .navbar nav {
+        display: none;
+    }
+
+    .cars-container {
+        grid-template-columns: 1fr;
+    }
+
+    .hero h1 {
+        font-size: 65px;
+    }
+
+    .about h2 {
+        font-size: 45px;
+    }
+}
+
+
+/* ========================================
+   RESPONSIVE - MOBILE
+======================================== */
+
+@media (max-width: 500px) {
+
+    .navbar {
+        padding: 0 5%;
+    }
+
+    .hero {
+        padding: 100px 6%;
+    }
+
+    .hero h1 {
+        font-size: 52px;
+        letter-spacing: -2px;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+    }
+
+    .btn {
+        width: 100%;
+        text-align: center;
+    }
+
+    .models {
+        padding: 80px 5%;
+    }
+
+    .section-title h2 {
+        font-size: 35px;
+    }
+
+    .car-image {
+        height: 240px;
+    }
+
+    .car-image span {
+        font-size: 28px;
+    }
+
+    .car-content {
+        padding: 22px;
+    }
+
+    .specifications {
+        gap: 5px;
+    }
+
+    .specifications div {
+        padding: 10px 5px;
+    }
+
+    .about {
+        padding: 80px 6%;
+    }
+
+    .about h2 {
+        font-size: 38px;
+    }
+
+    .contact {
+        padding: 80px 5%;
+    }
+}

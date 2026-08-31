@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>BMW Cars | Premium Automobile</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <header class="navbar">
+
+        <div class="logo">
+            BMW
+        </div>
+
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#models">Models</a>
+            <a href="#about">About</a>
+            <a href="#contact">Contact</a>
+        </nav>
+
+        <button class="menu-btn" onclick="showMessage()">
+            Explore
+        </button>
+
+    </header>
+
+
+    <!-- HERO SECTION -->
+    <section class="hero" id="home">
+
+        <div class="hero-content">
+
+            <p class="subtitle">
+                THE NEW BMW EXPERIENCE
+            </p>
+
+            <h1>
+                DRIVE THE
+                <span>EXTRAORDINARY</span>
+            </h1>
+
+            <p class="hero-text">
+                Discover a new generation of luxury,
+                technology and performance.
+            </p>
+
+            <div class="hero-buttons">
+
+                <a href="#models" class="btn primary">
+                    Explore Models
+                </a>
+
+                <a href="#about" class="btn secondary">
+                    Discover BMW
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- MODELS SECTION -->
+    <section class="models" id="models">
+
+        <div class="section-title">
+
+            <p>BMW COLLECTION</p>
+
+            <h2>
+                OUR MODELS
+            </h2>
+
+        </div>
+
+
+        <div class="cars-container">
+
+
+            <!-- BMW M4 -->
+            <div class="car-card">
+
+                <div class="car-image m4">
+
+                    <span>BMW M4</span>
+
+                </div>
+
+                <div class="car-content">
+
+                    <h3>BMW M4 Competition</h3>
+
+                    <p>
+                        A powerful sports coupe designed
+                        for an unforgettable driving experience.
+                    </p>
+
+                    <div class="specifications">
+
+                        <div>
+                            <strong>503</strong>
+                            <small>HP</small>
+                        </div>
+
+                        <div>
+                            <strong>3.0</strong>
+                            <small>L ENGINE</small>
+                        </div>
+
+                        <div>
+                            <strong>AWD</strong>
+                            <small>DRIVE</small>
+                        </div>
+
+                    </div>
+
+                    <button onclick="viewCar('BMW M4 Competition')">
+                        View Details
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- BMW i7 -->
+            <div class="car-card">
+
+                <div class="car-image i7">
+
+                    <span>BMW i7</span>
+
+                </div>
+
+                <div class="car-content">
+
+                    <h3>BMW i7</h3>
+
+                    <p>
+                        Experience premium electric mobility
+                        with advanced technology and comfort.
+                    </p>
+
+                    <div class="specifications">
+
+                        <div>
+                            <strong>EV</strong>
+                            <small>POWER</small>
+                        </div>
+
+                        <div>
+                            <strong>600+</strong>
+                            <small>KM RANGE</small>
+                        </div>
+
+                        <div>
+                            <strong>AWD</strong>
+                            <small>DRIVE</small>
+                        </div>
+
+                    </div>
+
+                    <button onclick="viewCar('BMW i7')">
+                        View Details
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- BMW XM -->
+            <div class="car-card">
+
+                <div class="car-image xm">
+
+                    <span>BMW XM</span>
+
+                </div>
+
+                <div class="car-content">
+
+                    <h3>BMW XM</h3>
+
+                    <p>
+                        A performance SUV combining luxury,
+                        power and bold design.
+                    </p>
+
+                    <div class="specifications">
+
+                        <div>
+                            <strong>644</strong>
+                            <small>HP</small>
+                        </div>
+
+                        <div>
+                            <strong>V8</strong>
+                            <small>ENGINE</small>
+                        </div>
+
+                        <div>
+                            <strong>M</strong>
+                            <small>POWER</small>
+                        </div>
+
+                    </div>
+
+                    <button onclick="viewCar('BMW XM')">
+                        View Details
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- BMW X5 -->
+            <div class="car-card">
+
+                <div class="car-image x5">
+
+                    <span>BMW X5</span>
+
+                </div>
+
+                <div class="car-content">
+
+                    <h3>BMW X5</h3>
+
+                    <p>
+                        Luxury SUV with versatile performance,
+                        comfort and intelligent technology.
+                    </p>
+
+                    <div class="specifications">
+
+                        <div>
+                            <strong>375</strong>
+                            <small>HP</small>
+                        </div>
+
+                        <div>
+                            <strong>3.0</strong>
+                            <small>L ENGINE</small>
+                        </div>
+
+                        <div>
+                            <strong>xDRIVE</strong>
+                            <small>DRIVE</small>
+                        </div>
+
+                    </div>
+
+                    <button onclick="viewCar('BMW X5')">
+                        View Details
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ABOUT SECTION -->
+    <section class="about" id="about">
+
+        <div class="about-text">
+
+            <p class="subtitle">
+                THE BMW PHILOSOPHY
+            </p>
+
+            <h2>
+                ENGINEERED FOR
+                <span>EXCELLENCE.</span>
+            </h2>
+
+            <p>
+                BMW vehicles combine innovative technology,
+                sophisticated design and dynamic performance.
+                Every detail is designed around the driver.
+            </p>
+
+            <button onclick="learnMore()">
+                Learn More
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- CONTACT SECTION -->
+    <section class="contact" id="contact">
+
+        <div class="section-title">
+
+            <p>GET IN TOUCH</p>
+
+            <h2>
+                CONTACT US
+            </h2>
+
+        </div>
+
+
+        <form id="contactForm">
+
+            <input
+                type="text"
+                id="name"
+                placeholder="Your Name"
+                required
+            >
+
+            <input
+                type="email"
+                id="email"
+                placeholder="Your Email"
+                required
+            >
+
+            <textarea
+                id="message"
+                placeholder="Your Message"
+                required
+            ></textarea>
+
+            <button type="submit">
+                Send Message
+            </button>
+
+        </form>
+
+    </section>
+
+
+    <!-- FOOTER -->
+    <footer>
+
+        <div class="footer-logo">
+            BMW
+        </div>
+
+        <p>
+            © 2026 BMW Cars Project. Created for educational purposes.
+        </p>
+
+    </footer>
+
+
+    <!-- JAVASCRIPT -->
+     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+</body>
+</html>
